@@ -1,0 +1,68 @@
+<div class="row">
+    <mat-toolbar color="primary">
+        <mat-toolbar-row class="col-xs-12" >
+            <div class="col-xs-6 end-xs">
+                <span>{{'SALUDO' | translate}}</span>
+            </div>
+            <div class="col-xs-6 end-xs">
+                <mat-form-field>
+                    <mat-label>{{'LANG' | translate}}</mat-label>
+                    <mat-select [(ngModel)]="languageSelected" (ngModelChange)="establecerIdioma($event)">
+                        <mat-option *ngFor="let language of languages" [value]="language">
+                            {{language}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <button mat-button color="accent" routerLink="/login">{{'OUT' | translate}}
+                    <mat-icon>exit_to_app</mat-icon></button>
+            </div>
+        </mat-toolbar-row>
+    </mat-toolbar>
+</div>
+<div class="row start-xs" *ngIf="usuario">
+
+    <mat-card class="info-usuario">
+        <mat-card-header>
+            <mat-card-title>{{'USERINFO' | translate}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="col-xs-6 center-xs margen-contenedor">
+                <div class="col-xs-4">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>{{'NOMBRE' | translate}}</mat-label>
+                        <input matInput  disabled [(ngModel)]="usuario.nombreUsuario">
+                    </mat-form-field>
+                </div>
+                <div class="col-xs-4">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>{{'APATERNO' | translate}}</mat-label>
+                        <input matInput  disabled [(ngModel)]="usuario.apellidoPaterno">
+                    </mat-form-field>
+                </div>
+                <div class="col-xs-4">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>{{'AMATERNO' | translate}}</mat-label>
+                        <input matInput  disabled [(ngModel)]="usuario.apellidoMaterno">
+                    </mat-form-field>
+                </div>
+
+                <div class="col-xs-4">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>{{'USUARIO' | translate}}</mat-label>
+                        <input matInput  disabled [(ngModel)]="usuario.usuario">
+                    </mat-form-field>
+                </div>
+                <div class="col-xs-4">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>{{'CONTRASENA' | translate}}</mat-label>
+                        <input matInput  disabled [(ngModel)]="usuario.contrasena">
+                    </mat-form-field>
+                </div>
+
+            </div>
+        </mat-card-content>
+    </mat-card>
+
+</div>
+
