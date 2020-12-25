@@ -1,3 +1,6 @@
+:host {
+  height: 100vh;
+}
 
 @media(min-width: 576px) {
   .icon-user-size {
@@ -15,8 +18,9 @@
 }
 
 .container-login {
-  min-width: 100%;
-  min-height: -webkit-fill-available;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
 }
 
 .icon-user-size {
@@ -41,8 +45,9 @@
 }
 
 .color-text {
-  background-color: white;
+  background-color: rgba(255, 255, 255, .8);
 }
+
 .radio {
   border-radius: 50%;
 }

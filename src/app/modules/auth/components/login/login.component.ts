@@ -39,30 +39,18 @@ export class LoginComponent implements OnInit {
 
     logear() {
         if (this.form.valid) {
-            this.loginService.logear(this.form.value).subscribe((result) => {
-                if (result.codigo === 200) {
-                    let saludo: string = '';
-                    this.translateService.get('SALUDO').subscribe(res => {
-                        saludo = res;
-                    })
-                    this.router.navigate(['/home', result.usuario.idUsuario]);
-                    Swal.fire({
-                        title: saludo,
-                        icon: 'success'
-                    });
-
-                } else {
-                    Swal.fire({
-                        title: 'Usuario o contraseña incorrecto',
-                        icon: 'error'
-                    });
-                }
-            }, (error => {
-                console.log(error)
-            }))
+            let saludo: string = '';
+            this.translateService.get('SALUDO').subscribe(res => {
+                saludo = res;
+            });
+            this.router.navigate(['/home', 10]);
+            Swal.fire({
+                title: saludo,
+                icon: 'success'
+            });
         }
-    }
 
+    }
     /**
      * Metodo para validar si el control tiene algun error dependiendo el parametro
      * @param control

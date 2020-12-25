@@ -13,7 +13,14 @@ import {TranslateService} from "@ngx-translate/core";
 export class HomeComponent implements OnInit {
 
   idUsuario: number = null;
-  usuario: Usuario = null;
+  usuario: Usuario =  {
+    apellidoMaterno: '',
+    apellidoPaterno: '',
+    contrasena: '',
+    idUsuario: 100,
+    nombreUsuario: '',
+    usuario: ''
+  };
   languages: string[] = [];
   languageSelected: string = "";
 
