@@ -1,0 +1,14 @@
+{
+  "SALUDO": "Welcome To The System",
+  "LANG": "Change language",
+  "USERINFO": "User information",
+  "USUARIO": "User",
+  "CONTRASENA": "Password",
+  "APATERNO": "Last name",
+  "AMATERNO": "Mother's last name",
+  "NOMBRE": "Name",
+  "IN": "Login",
+  "OUT": "Log Out",
+  "ERRORLONGITUD": "Invalid field length",
+  "OBLIGATORIO": "The field is required."
+}

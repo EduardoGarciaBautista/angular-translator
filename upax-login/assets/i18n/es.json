@@ -1,0 +1,14 @@
+{
+  "SALUDO": "Bienvenido al sistema",
+  "LANG": "Cambiar lenjuaje",
+  "USERINFO": "Información del usuario",
+  "USUARIO": "Usuario",
+  "CONTRASENA": "Contraseña",
+  "APATERNO": "Apellido Paterno",
+  "AMATERNO": "Apellido Materno",
+  "NOMBRE": "Nombre",
+  "IN": "Entrar",
+  "OUT": "Salir",
+  "ERRORLONGITUD": "Longitud de campo invalido",
+  "OBLIGATORIO": "El campo es requerido."
+}
